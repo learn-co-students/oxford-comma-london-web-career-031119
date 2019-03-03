@@ -1,7 +1,8 @@
 def oxford_comma(array)
   last = array.pop
   if array.empty?
-    return puts "#{last}"
+    return "#{last}"
   end
-  puts array.join(", ").concat(" and #{last}")
+  array.push("and #{last}")
+  array.length == 2 ? array.join(" ") : array.join(", ")
 end
